@@ -1,5 +1,5 @@
 {% load i18n l10n %}
-{% load admin_urls admin_static admin_list filermedia filer_tags %}
+{% load admin_urls static admin_list filermedia filer_tags %}
 
 <div id="toolbartable">
     <table cellspacing="0" class="table table-striped">
@@ -66,11 +66,11 @@
                         <a class="btn btn-default btn-xs changelink" href="{{ file.get_admin_url_path }}{% if is_popup %}?_popup=1{% if select_folder %}&select_folder=1{% endif %}{% endif %}" title="{% blocktrans with file.label as item_label %}Change '{{ item_label }}' details{% endblocktrans %}"><i class="glyphicon glyphicon-edit"></i>{% trans "Change" %}</a>
                     </div>
                     {% endif %}
-                    
+
                     <div>
                         <b>{% if item_perms.change %}<a href="{{ file.get_admin_url_path }}{% if is_popup %}?_popup=1{% if select_folder %}&select_folder=1{% endif %}{% endif %}" title="{% blocktrans with file.label as item_label %}Change '{{ item_label }}' details{% endblocktrans %}">{{ file.label }}</a>{% else %}{{ file.label }}{% endif %}</b><span class="tiny"> ({{ file.size|filesize:"auto1000long" }}{% ifequal file.file_type "Image" %}, {{ file.width }}x{{ file.height }} px{% endifequal %})</span>
                     </div>
-                    
+
                     <div>
                         {% trans "Owner" %}: {{ file.owner|default:"n/a" }}</div>
                         {% if enable_permissions %}
