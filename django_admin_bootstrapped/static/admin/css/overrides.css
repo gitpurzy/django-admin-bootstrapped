@@ -17,7 +17,7 @@ a:focus {
 .controls > ul,
 .controls .related-widget-wrapper > ul {
     list-style-type: none;
-    padding-left: 0px;
+    padding-left: 0;
 }
 .controls > ul label,
 .controls .related-widget-wrapper > ul label {
@@ -38,9 +38,8 @@ a:focus {
 
 /* SELECTOR (FILTER INTERFACE) */
 .selector .selector-filter {
-    border: 0px solid #ccc;
-    border-width: 0 0px;
-    padding: 4px 0px 4px 0px;
+    border: 0 solid #ccc;
+    padding: 4px 0 4px 0;
 }
 .selector .selector-filter label {
     display: none;
@@ -64,8 +63,8 @@ a:focus {
     background-color: #fff;
     background-image: none;
     border: 1px solid #ccc;
-    border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.075) inset;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.075) inset;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
 /* selector object list items */
@@ -84,10 +83,10 @@ a:focus {
     border-bottom: none;
     font-size: 100%;
     font-weight: 600;
-    margin: 0px;
-    padding: 10px 0px 6px 10px;
+    margin: 0;
+    padding: 10px 0 6px 10px;
     height: 36px;
-    border-radius: 4px 4px 0px 0px;
+    border-radius: 4px 4px 0 0;
 }
 /* selector filter box bootstrapping */
 .selector .selector-available input {
@@ -101,21 +100,21 @@ a:focus {
     background-image: none;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
 .selector .selector-available p {
     background: rgba(211, 211, 211, 0.2);
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
-    padding: 0px 0px 7px 6px;
+    padding: 0 0 7px 6px;
 }
 /* selector chooseall and clearall button spacing */
 a.selector-chooseall {
-    padding: 0px 20px 3px 0;
+    padding: 0 20px 3px 0;
 }
 a.selector-clearall {
-    padding: 0px 0 3px 20px;
+    padding: 0 0 3px 20px;
 }
 
 .checkbox{
@@ -207,7 +206,7 @@ td.action-checkbox {
 .checkbox input[type="checkbox"] {
     position: static;
     float: left;
-    margin-left: 0px;
+    margin-left: 0;
     margin-right: 5px;
 }
 
@@ -218,11 +217,14 @@ td.action-checkbox {
 
 @media (min-width: 768px) {
     .navbar-nav.navbar-right:last-child {
-        margin-right: 0px;
+        margin-right: 0;
     }
 }
 
-#content-navbar-collapse .btn-primary {
+#content-navbar-collapse .btn-primary,
+#content-navbar-collapse .btn-danger,
+#content-navbar-collapse .btn-default,
+#content-navbar-collapse .btn-success {
     color: #fff;
     padding: 6px 12px;
     margin-top: 8px;
@@ -246,8 +248,8 @@ td.action-checkbox {
 /* FILE UPLOAD WIDGET*/
 p.file-upload {
     line-height: 29px;
-    margin: 1;
-    padding: 2px 0px 10px 0px;
+    margin: 1px;
+    padding: 2px 0 10px 0;
     color: #666;
     font-size: inherit;
     font-weight: inherit;
